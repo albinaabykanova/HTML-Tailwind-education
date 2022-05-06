@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body class="bg-white h-full flex flex-col dark:bg-gray-900 dark:text-white">
+
+    <div class="h-15 border-b flex-shrink-0 border-gray-100 dark:border-gray-700 w-full flex justify-between items-center px-3 lg:px-5">
+
+     <button onclick="sidebar()" class="text-prototurk dark:text-white lg:hidden">
+        <svg xmlns="http://www.w3.org/2000/svg" height="48" width="48" class="fill-current"><path d="M6 36V33H42V36ZM6 25.5V22.5H42V25.5ZM6 15V12H42V15Z"/></svg>
+     </button>
+
+        <a href="#" class="text-2xl font-medium inline-flex items-center text-prototurk dark:text-white">
+            ./AlbinaAbykan
+            <span class="text-sm text-gray-400 ml-2 hidden lg:inline">v2.5.0</span>
+        </a>
+        <form action="" class="w-1/3 hidden lg:block">
+            <input type="text" placeholder="Makelelerdi ara" class="w-full bg-gray-100 h-10 px-3 placeholder-gray-500 dark:bg-gray-700 dark:placeholder-gray-300 rounded">
+        </form>
+
+        <a href="javascript:;" onclick="modal('login-modal')" class="bg-prototurk hidden text-white h-10 inline-flex items-center px-5 rounded ">Giriş yap</a>
+
+        <div class="group relative">
+            <button class="flex items-center h-10 rounded text-sm">
+                 <img src="https://avatars.githubusercontent.com/u/94489971?v=4" alt="" width="30" height="30" class="rounded-full">
+                 <span class="hidden lg:inline ml-3">Albishaaa</span>
+                 <svg xmlns="http://www.w3.org/2000/svg" height="48" width="48" class="fill-current"><path d="M24 30 14 20.05H34Z"/></svg>
+            </button>
+            <div tabindex="0" class=" opacity-0 invisible absolute z-[3] top-full  right-0 w-36 rounded p-1 space-y-1 bg-gray-200  group-focus-within:mt-1 group-focus-within:opacity-100 group-focus-within:visible transition-all dark:bg-gray-700">
+               <a href="javascript:;" onclick="modal('login-modal')" class="text-sm flex h-5 items-center px-3 rounded transition-colors hover:bg-gray-200 dark:hover:bg-gray-600 ">Profil</a>
+               <a href="#" class="text-sm flex h-5 items-center px-3 rounded transition-colors hover:bg-gray-200 dark:hover:bg-gray-600">Profil Düzenle</a>
+               <a href="#" class="text-sm flex h-5 items-center px-3 rounded transition-colors hover:bg-gray-200 dark:hover:bg-gray-600" >Takipçiler</a>
+               <a href="#" class="text-sm flex h-5 items-center px-3 rounded transition-colors hover:bg-gray-200 dark:hover:bg-gray-600" >Sorular</a>
+               <a href="#" class="text-sm flex h-5 items-center px-3 rounded transition-colors hover:bg-gray-200 dark:hover:bg-gray-600" >Cevaplar</a>
+               <a href="#" class="text-sm flex h-5 items-center px-3 rounded text-red-500 transition-colors hover:bg-red-100 dark:hover:bg-red-200 dark:hover:text-white" >Çıkış yap</a>
+            </div>
+        </div>
+    </div>
+
+
+    <main class="calc-h-full-15 flex">
+        <aside class="sidebar>
+            <nav class="mb-3 space-y-1">
+                    <a href="#" class="nav-link">Anasayfa</a>
+                    <a href="#" class="nav-link">Akış</a>
+                    <a href="#" class="nav-link">Keşfet</a>
+                    <a href="#" class="nav-link">Makaleler</a>
+                    <a href="#" class="nav-link">Soru & cevap</a>
+            </nav>
+            <nav class="mt-3 pt-3">
+                    <a href="#" class="nav-link">HTML</a>
+                    <a href="#" class="nav-link">CSS</a>
+                    <a href="#" class="nav-link">Javascript</a>
+                    <a href="#" class="nav-link">PHP</a>
+                    <a href="#" class="nav-link">MySQL</a>
+                    <a href="#" class="nav-link">Laravel</a>
+                    <a href="#" class="nav-link">Python</a>
+                    <a href="#" class="nav-link">MySQL</a>
+                    <a href="#" class="nav-link">Laravel</a>
+                    <a href="#" class="nav-link">Python</a>
+        
+            </nav>
+             
+            <button onclick="darkMode()" class="mt-auto pt-3 ">
+                <a href="#" class="bg-gray-800 dark:bg-white hover:gray-600 w-full transition-colors h-10 text-white dark:text-gray-800 rounded flex items-center px-4 text-sm">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="48" width="48" class="fill-current  mr-3 "><path d="M24 33.85 26.75 31.1H31.45V26.3L33.95 23.8L31.45 21.35V16.6H26.7L24 13.9L21.3 16.6H16.7V21.35L14.2 23.85L16.7 26.35V31.1H21.3ZM24 29.85V17.95Q26.45 17.95 28.175 19.675Q29.9 21.4 29.9 23.9Q29.9 26.4 28.175 28.125Q26.45 29.85 24 29.85ZM7 40Q5.8 40 4.9 39.1Q4 38.2 4 37V11Q4 9.8 4.9 8.9Q5.8 8 7 8H41Q42.2 8 43.1 8.9Q44 9.8 44 11V37Q44 38.2 43.1 39.1Q42.2 40 41 40ZM7 37Q7 37 7 37Q7 37 7 37V11Q7 11 7 11Q7 11 7 11Q7 11 7 11Q7 11 7 11V37Q7 37 7 37Q7 37 7 37ZM7 37H41Q41 37 41 37Q41 37 41 37V11Q41 11 41 11Q41 11 41 11H7Q7 11 7 11Q7 11 7 11V37Q7 37 7 37Q7 37 7 37Z"/></svg>
+                    <span class="hidden dark:inline ">Açık mod</span>
+                    <span class="inline dark:hidden ">Koyu  mod</span>
+                 </a>
+                </button>
+        
+        </aside>
+        <section class="flex-auto py-6 px-5 md:px-10 overflow-auto">
+            <div class="mx-auto max-w-screen-xl">
+                <h2 class="text-3xl font-semibold mb-3  leading-relaxed text-prototurk dark:text-white">Kendine değer kat!</h2>
+                <p>
+                    İyi bir kariyer için, doğru bir başlangıç gerekir. Prototürk'de bir çok dil ve teknology ait derslerle doğru bir başlangıç yapmaya hazırsın!
+                </p>
+
+                <div class="flex lg:grid mt-5 mb-5 overflow-x-auto grid-cols-10 gap-3 lg:gap-7">
+                     <div class="col-span-5 lg:col-span-2">
+                         <a href="#" class="slider-item">
+                             <span class="w-24 mb-4 h-24 border border-red-500 rounded-full grid place-items-center relative">
+                                 <span class="absolute -top-3 -right-3 w-24 h-24 scale-90 bg-red-500 bg-opacity-10 rounded-full -z-1"></span>
+                                <svg xmlns="http://www.w3.org/2000/svg" height="40" width="48" class="fill-current text-red-700"><path d="M8.5 23.75Q6.6 23.75 5.3 22.45Q4 21.15 4 19.25Q4 17.35 5.3 16.05Q6.6 14.75 8.5 14.75Q10.4 14.75 11.7 16.05Q13 17.35 13 19.25Q13 21.15 11.7 22.45Q10.4 23.75 8.5 23.75ZM17.75 15.25Q15.85 15.25 14.55 13.95Q13.25 12.65 13.25 10.75Q13.25 8.85 14.55 7.55Q15.85 6.25 17.75 6.25Q19.65 6.25 20.95 7.55Q22.25 8.85 22.25 10.75Q22.25 12.65 20.95 13.95Q19.65 15.25 17.75 15.25ZM30.25 15.25Q28.35 15.25 27.05 13.95Q25.75 12.65 25.75 10.75Q25.75 8.85 27.05 7.55Q28.35 6.25 30.25 6.25Q32.15 6.25 33.45 7.55Q34.75 8.85 34.75 10.75Q34.75 12.65 33.45 13.95Q32.15 15.25 30.25 15.25ZM39.5 23.75Q37.6 23.75 36.3 22.45Q35 21.15 35 19.25Q35 17.5 36.3 16.125Q37.6 14.75 39.5 14.75Q41.4 14.75 42.7 16.05Q44 17.35 44 19.25Q44 21.15 42.7 22.45Q41.4 23.75 39.5 23.75ZM13.3 44.25Q11.2 44.25 9.85 42.675Q8.5 41.1 8.5 38.95Q8.5 36.85 9.775 35.225Q11.05 33.6 12.5 32.1Q13.6 31 14.55 29.775Q15.5 28.55 16.35 27.25Q17.8 25.05 19.6 23.15Q21.4 21.25 24 21.25Q26.6 21.25 28.425 23.15Q30.25 25.05 31.7 27.3Q32.55 28.6 33.475 29.8Q34.4 31 35.5 32.1Q36.95 33.6 38.225 35.225Q39.5 36.85 39.5 38.95Q39.5 41.1 38.15 42.675Q36.8 44.25 34.7 44.25Q32 44.25 29.35 43.8Q26.7 43.35 24 43.35Q21.3 43.35 18.65 43.8Q16 44.25 13.3 44.25Z"/></svg>
+                             </span>
+                             <span class="inline-flex h-8 px-5 items-center rounded text-white bg-red-500 group-hover:bg-red-900 transition-colors">
+                                  HTML
+                             </span>
+                          </a>
+                     </div>
+                     <div class="col-span-5 lg:col-span-2">
+                        <a href="#" class="slider-item">
+                            <span class="w-24 mb-4 h-24 border border-blue-500 rounded-full grid place-items-center relative">
+                                <span class="absolute -top-3 -right-3 w-24 h-24 scale-90 bg-blue-500 bg-opacity-10 rounded-full -z-1"></span>
+                               <svg xmlns="http://www.w3.org/2000/svg" height="40" width="48" class="fill-current text-blue-700"><path d="M8.5 23.75Q6.6 23.75 5.3 22.45Q4 21.15 4 19.25Q4 17.35 5.3 16.05Q6.6 14.75 8.5 14.75Q10.4 14.75 11.7 16.05Q13 17.35 13 19.25Q13 21.15 11.7 22.45Q10.4 23.75 8.5 23.75ZM17.75 15.25Q15.85 15.25 14.55 13.95Q13.25 12.65 13.25 10.75Q13.25 8.85 14.55 7.55Q15.85 6.25 17.75 6.25Q19.65 6.25 20.95 7.55Q22.25 8.85 22.25 10.75Q22.25 12.65 20.95 13.95Q19.65 15.25 17.75 15.25ZM30.25 15.25Q28.35 15.25 27.05 13.95Q25.75 12.65 25.75 10.75Q25.75 8.85 27.05 7.55Q28.35 6.25 30.25 6.25Q32.15 6.25 33.45 7.55Q34.75 8.85 34.75 10.75Q34.75 12.65 33.45 13.95Q32.15 15.25 30.25 15.25ZM39.5 23.75Q37.6 23.75 36.3 22.45Q35 21.15 35 19.25Q35 17.5 36.3 16.125Q37.6 14.75 39.5 14.75Q41.4 14.75 42.7 16.05Q44 17.35 44 19.25Q44 21.15 42.7 22.45Q41.4 23.75 39.5 23.75ZM13.3 44.25Q11.2 44.25 9.85 42.675Q8.5 41.1 8.5 38.95Q8.5 36.85 9.775 35.225Q11.05 33.6 12.5 32.1Q13.6 31 14.55 29.775Q15.5 28.55 16.35 27.25Q17.8 25.05 19.6 23.15Q21.4 21.25 24 21.25Q26.6 21.25 28.425 23.15Q30.25 25.05 31.7 27.3Q32.55 28.6 33.475 29.8Q34.4 31 35.5 32.1Q36.95 33.6 38.225 35.225Q39.5 36.85 39.5 38.95Q39.5 41.1 38.15 42.675Q36.8 44.25 34.7 44.25Q32 44.25 29.35 43.8Q26.7 43.35 24 43.35Q21.3 43.35 18.65 43.8Q16 44.25 13.3 44.25Z"/></svg>
+                            </span>
+                            <span class="inline-flex h-8 px-5 items-center rounded text-white bg-blue-500 group-hover:bg-blue-900 transition-colors">
+                                  CSS
+                            </span>
+                         </a>
+                    </div>
+                    <div class="col-span-5 lg:col-span-2">
+                        <a href="#" class="slider-item">
+                            <span class="w-24 mb-4 h-24 border border-yellow-500 rounded-full grid place-items-center relative">
+                                <span class="absolute -top-3 -right-3 w-24 h-24 scale-90 bg-yellow-500 bg-opacity-10 rounded-full -z-1"></span>
+                               <svg xmlns="http://www.w3.org/2000/svg" height="40" width="48" class="fill-current text-yellow-700 "><path d="M8.5 23.75Q6.6 23.75 5.3 22.45Q4 21.15 4 19.25Q4 17.35 5.3 16.05Q6.6 14.75 8.5 14.75Q10.4 14.75 11.7 16.05Q13 17.35 13 19.25Q13 21.15 11.7 22.45Q10.4 23.75 8.5 23.75ZM17.75 15.25Q15.85 15.25 14.55 13.95Q13.25 12.65 13.25 10.75Q13.25 8.85 14.55 7.55Q15.85 6.25 17.75 6.25Q19.65 6.25 20.95 7.55Q22.25 8.85 22.25 10.75Q22.25 12.65 20.95 13.95Q19.65 15.25 17.75 15.25ZM30.25 15.25Q28.35 15.25 27.05 13.95Q25.75 12.65 25.75 10.75Q25.75 8.85 27.05 7.55Q28.35 6.25 30.25 6.25Q32.15 6.25 33.45 7.55Q34.75 8.85 34.75 10.75Q34.75 12.65 33.45 13.95Q32.15 15.25 30.25 15.25ZM39.5 23.75Q37.6 23.75 36.3 22.45Q35 21.15 35 19.25Q35 17.5 36.3 16.125Q37.6 14.75 39.5 14.75Q41.4 14.75 42.7 16.05Q44 17.35 44 19.25Q44 21.15 42.7 22.45Q41.4 23.75 39.5 23.75ZM13.3 44.25Q11.2 44.25 9.85 42.675Q8.5 41.1 8.5 38.95Q8.5 36.85 9.775 35.225Q11.05 33.6 12.5 32.1Q13.6 31 14.55 29.775Q15.5 28.55 16.35 27.25Q17.8 25.05 19.6 23.15Q21.4 21.25 24 21.25Q26.6 21.25 28.425 23.15Q30.25 25.05 31.7 27.3Q32.55 28.6 33.475 29.8Q34.4 31 35.5 32.1Q36.95 33.6 38.225 35.225Q39.5 36.85 39.5 38.95Q39.5 41.1 38.15 42.675Q36.8 44.25 34.7 44.25Q32 44.25 29.35 43.8Q26.7 43.35 24 43.35Q21.3 43.35 18.65 43.8Q16 44.25 13.3 44.25Z"/></svg>
+                            </span>
+                            <span class="inline-flex h-8 px-5 items-center rounded text-white bg-yellow-500 group-hover:bg-yellow-900 transition-colors">
+                                  Javascript
+                            </span>
+                         </a>
+                    </div>
+                    <div class="col-span-5 lg:col-span-2">
+                        <a href="#" class="slider-item">
+                            <span class="w-24 mb-4 h-24 border border-indigo-500 rounded-full grid place-items-center relative">
+                                <span class="absolute -top-3 -right-3 w-24 h-24 scale-90 bg-indigo-500 bg-opacity-10 rounded-full -z-1"></span>
+                               <svg xmlns="http://www.w3.org/2000/svg" height="40" width="48" class="fill-current text-indigo-700"><path d="M8.5 23.75Q6.6 23.75 5.3 22.45Q4 21.15 4 19.25Q4 17.35 5.3 16.05Q6.6 14.75 8.5 14.75Q10.4 14.75 11.7 16.05Q13 17.35 13 19.25Q13 21.15 11.7 22.45Q10.4 23.75 8.5 23.75ZM17.75 15.25Q15.85 15.25 14.55 13.95Q13.25 12.65 13.25 10.75Q13.25 8.85 14.55 7.55Q15.85 6.25 17.75 6.25Q19.65 6.25 20.95 7.55Q22.25 8.85 22.25 10.75Q22.25 12.65 20.95 13.95Q19.65 15.25 17.75 15.25ZM30.25 15.25Q28.35 15.25 27.05 13.95Q25.75 12.65 25.75 10.75Q25.75 8.85 27.05 7.55Q28.35 6.25 30.25 6.25Q32.15 6.25 33.45 7.55Q34.75 8.85 34.75 10.75Q34.75 12.65 33.45 13.95Q32.15 15.25 30.25 15.25ZM39.5 23.75Q37.6 23.75 36.3 22.45Q35 21.15 35 19.25Q35 17.5 36.3 16.125Q37.6 14.75 39.5 14.75Q41.4 14.75 42.7 16.05Q44 17.35 44 19.25Q44 21.15 42.7 22.45Q41.4 23.75 39.5 23.75ZM13.3 44.25Q11.2 44.25 9.85 42.675Q8.5 41.1 8.5 38.95Q8.5 36.85 9.775 35.225Q11.05 33.6 12.5 32.1Q13.6 31 14.55 29.775Q15.5 28.55 16.35 27.25Q17.8 25.05 19.6 23.15Q21.4 21.25 24 21.25Q26.6 21.25 28.425 23.15Q30.25 25.05 31.7 27.3Q32.55 28.6 33.475 29.8Q34.4 31 35.5 32.1Q36.95 33.6 38.225 35.225Q39.5 36.85 39.5 38.95Q39.5 41.1 38.15 42.675Q36.8 44.25 34.7 44.25Q32 44.25 29.35 43.8Q26.7 43.35 24 43.35Q21.3 43.35 18.65 43.8Q16 44.25 13.3 44.25Z"/></svg>
+                            </span>
+                            <span class="inline-flex h-8 px-5 items-center rounded text-white bg-indigo-500 group-hover:bg-indigo-900 transition-colors">
+                                  PHP
+                            </span>
+                         </a>
+                    </div>
+                    <div class="col-span-5 lg:col-span-2">
+                        <a href="#" class="slider-item">
+                            <span class="w-24 mb-4 h-24 border border-sky-500 rounded-full grid place-items-center relative">
+                                <span class="absolute -top-3 -right-3 w-24 h-24 scale-90 bg-sky-900 bg-opacity-10 rounded-full -z-1"></span>
+                               <svg xmlns="http://www.w3.org/2000/svg" height="40" width="48" class="fill-current text-sky-700"><path d="M8.5 23.75Q6.6 23.75 5.3 22.45Q4 21.15 4 19.25Q4 17.35 5.3 16.05Q6.6 14.75 8.5 14.75Q10.4 14.75 11.7 16.05Q13 17.35 13 19.25Q13 21.15 11.7 22.45Q10.4 23.75 8.5 23.75ZM17.75 15.25Q15.85 15.25 14.55 13.95Q13.25 12.65 13.25 10.75Q13.25 8.85 14.55 7.55Q15.85 6.25 17.75 6.25Q19.65 6.25 20.95 7.55Q22.25 8.85 22.25 10.75Q22.25 12.65 20.95 13.95Q19.65 15.25 17.75 15.25ZM30.25 15.25Q28.35 15.25 27.05 13.95Q25.75 12.65 25.75 10.75Q25.75 8.85 27.05 7.55Q28.35 6.25 30.25 6.25Q32.15 6.25 33.45 7.55Q34.75 8.85 34.75 10.75Q34.75 12.65 33.45 13.95Q32.15 15.25 30.25 15.25ZM39.5 23.75Q37.6 23.75 36.3 22.45Q35 21.15 35 19.25Q35 17.5 36.3 16.125Q37.6 14.75 39.5 14.75Q41.4 14.75 42.7 16.05Q44 17.35 44 19.25Q44 21.15 42.7 22.45Q41.4 23.75 39.5 23.75ZM13.3 44.25Q11.2 44.25 9.85 42.675Q8.5 41.1 8.5 38.95Q8.5 36.85 9.775 35.225Q11.05 33.6 12.5 32.1Q13.6 31 14.55 29.775Q15.5 28.55 16.35 27.25Q17.8 25.05 19.6 23.15Q21.4 21.25 24 21.25Q26.6 21.25 28.425 23.15Q30.25 25.05 31.7 27.3Q32.55 28.6 33.475 29.8Q34.4 31 35.5 32.1Q36.95 33.6 38.225 35.225Q39.5 36.85 39.5 38.95Q39.5 41.1 38.15 42.675Q36.8 44.25 34.7 44.25Q32 44.25 29.35 43.8Q26.7 43.35 24 43.35Q21.3 43.35 18.65 43.8Q16 44.25 13.3 44.25Z"/></svg>
+                            </span>
+                            <span class="inline-flex h-8 px-5 items-center rounded text-white bg-sky-500 group-hover:bg-sky-900 transition-colors">
+                                  MySQL
+                            </span>
+                         </a>
+                    </div>
+                </div>
+
+                <div class="bg-sky-400 p-4 rounded-md text-white flex flex-col lg:flex-row items-center">
+                    <div class="flex-shrink-0 w-20 pl-0 lg:pl-2 mb-4 lg:mb-0 ">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="50" width="50" class="fill-current text-white"><path d="M24.05 44 22 38H8Q6.25 38 5.125 36.875Q4 35.75 4 34V8Q4 6.25 5.125 5.125Q6.25 4 8 4H20L21.75 9.95H40Q41.75 9.95 42.875 11.075Q44 12.2 44 13.95V40Q44 41.75 42.875 42.875Q41.75 44 40 44ZM14.35 29.2Q17.8 29.2 20 26.95Q22.2 24.7 22.2 21.15Q22.2 20.7 22.2 20.375Q22.2 20.05 22.1 19.8H14.15V22.85H18.65Q18.25 24.3 17.125 25.1Q16 25.9 14.4 25.9Q12.45 25.9 11.05 24.475Q9.65 23.05 9.65 21Q9.65 18.95 11.05 17.525Q12.45 16.1 14.4 16.1Q15.3 16.1 16.075 16.425Q16.85 16.75 17.5 17.4L19.95 15.1Q18.95 14 17.45 13.4Q15.95 12.8 14.35 12.8Q10.95 12.8 8.575 15.2Q6.2 17.6 6.2 21Q6.2 24.4 8.575 26.8Q10.95 29.2 14.35 29.2ZM27.7 30.15 28.85 29.1Q28.15 28.25 27.55 27.475Q26.95 26.7 26.4 25.8ZM30.2 27.6Q31.65 25.95 32.375 24.45Q33.1 22.95 33.35 22.1H25.4L25.95 24.25H27.95Q28.35 25 28.9 25.85Q29.45 26.7 30.2 27.6ZM26.05 42H40Q40.85 42 41.425 41.425Q42 40.85 42 40V13.95Q42 13.1 41.425 12.525Q40.85 11.95 40 11.95H22.4L24.7 20.1H28.65V17.95H30.7V20.1H38.05V22.1H35.45Q35 24 34 25.8Q33 27.6 31.65 29.15L37.1 34.55L35.65 36L30.2 30.6L28.4 32.4L30.05 38Z"/></svg>
+                    </div>
+                    <div>
+                        <h6 class="text-xl mb-1">Twitter'da <strong class="font-semibold">@prototurkcom</strong> hesabını takip etmeyi unutma!</h6>
+                        <p>Hazırladığımız son videolardan anında haberdar olmak için twitter hesabımızı takip etmeyi unutma!</p> 
+                        <a href="#" class="bg-white h-11 px-5 inline-flex items-center rounded text-black mt-4">Takip et</a>
+                   </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+    
+    <div class="modal" id="login-modal">
+        <div class="modal-content">
+           <h3 class="text-2xl mb-4">Giriş yap</h3>
+           <button onclick="modal('login-modal')" class="bg-prototurk px-6 inline-flex items-center rounded h-10 text-white">Kapat</button>
+        </div>
+    </div>
+
+    <script>
+        if (localStorage.getItem('dark')) {
+            document.documentElement.classList.add('dark');
+        }
+        function darkMode() {
+            document.documentElement.classList.toggle('dark');
+              if (document.documentElement.classList.contains('dark')) {
+                  localStorage.setItem('dark', true);
+              } else {
+                  localStorage.removeItem('dark');
+              }
+        }
+
+        function modal(id) {
+           document.getElementById(id).classList.toggle('active');
+        }
+
+        function sidebar() {
+            document.querySelector('.sidebar').classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
